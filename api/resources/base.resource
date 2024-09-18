@@ -1,14 +1,16 @@
 ***Settings***
 Documentation    Arquivo que implementa a estrutura inicial do projeto de teste
 
+Library    FakerLibrary    locale=pt_BR
 Library    RequestsLibrary
-Library    JSONLibrary
 
 #Lib Própria
-Library    minha_lib.function_package
+# Library    minha_lib.function_package
 
 # Resource actions/
-Resource    actions/actions_common.resource
+Resource    actions/action.resource
+Resource    actions/serverest.dev/usuarios/gherkin_usuarios.resource
 
 #Resource Assertions
-Resource    assertions/affiliation_api/assertions_affiliations_customers.resource
+Resource    assertions/assertion_common.resource
+Resource    assertions/serverest.dev/usuarios/usuarios.resource

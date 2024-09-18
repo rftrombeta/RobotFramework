@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-09-18T13:38:04.929628" rpa="false" schemaversion="5">
+<suite id="s1" name="Usuarios" source="C:\RFTROMBETA\MyGit\robot-framework\api\tests\serverest.dev\usuarios">
+<suite id="s1-s1" name="GET -&gt; /USUARIOS" source="C:\RFTROMBETA\MyGit\robot-framework\api\tests\serverest.dev\usuarios\get_usuarios.robot">
+<test id="s1-s1-t1" name="001 - Consultar usuários cadastrados" line="11">
+<kw name="Quando eu consultar os usuários cadastrados" owner="gherkin_usuarios">
+<msg time="2024-09-18T13:38:06.070573" level="TRACE">Arguments: [  ]</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-18T13:38:06.071270" level="TRACE">Arguments: [ 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:06.071270" level="TRACE">Return: 'https://serverest.dev/#'</msg>
+<msg time="2024-09-18T13:38:06.071776" level="INFO">${apiurl} = https://serverest.dev/#</msg>
+<var>${apiurl}</var>
+<arg>https://serverest.dev/#</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.071270" elapsed="0.000506"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:06.071925" level="TRACE">Arguments: [ 'usuarios' | 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:06.071925" level="INFO">Creating Session using : alias=usuarios, url=https://serverest.dev/#, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-18T13:38:06.071925" level="DEBUG">Creating session: usuarios</msg>
+<msg time="2024-09-18T13:38:06.071925" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000001A6F0550980&gt;</msg>
+<arg>usuarios</arg>
+<arg>${apiurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-18T13:38:06.071925" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:06.071925" level="TRACE">Arguments: [ 'usuarios' | url='/usuarios' ]</msg>
+<msg time="2024-09-18T13:38:06.074081" level="DEBUG">Starting new HTTPS connection (1): serverest.dev:443</msg>
+<msg time="2024-09-18T13:38:06.541839" level="DEBUG">https://serverest.dev:443 "GET /usuarios HTTP/11" 200 13709</msg>
+<msg time="2024-09-18T13:38:06.572672" level="INFO">GET Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-09-18T13:38:06.572672" level="INFO">GET Response : url=https://serverest.dev/usuarios 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': 'ff0f4dcff1f339fb69de07ec593d710c', 'Date': 'Wed, 18 Sep 2024 16:38:54 GMT', 'Server': 'Google Frontend', 'Content-Length': '13709'} 
+ body={
+    "quantidade": 63,
+    "usuarios": [
+        {
+            "nome": "silva ",
+            "email": "Gabriel98@yahoo.comqa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "0uxuPY0cbmQhpEz1"
+        },
+        {
+            "nome": "Adrienne Robel",
+            "email": "Tanya_Batz@gmail.com",
+            "password": "KAnDF0xXmfCXz73",
+            "administrador": "false",
+            "_id": "1CSRRIIdVk7ukMQq"
+        },
+        {
+            "nome": "gabriel",
+            "email": "gabrielt@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "1nYycTi2nSEm6xwX"
+        },
+        {
+            "nome": "Lauren Sellers",
+            "email": "kjackson@example.net",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "249ZZLDj74pQEC3C"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "lxwn@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "2UouLVEHJtL4yDX1"
+        },
+        {
+            "nome": "Murilo da Luz",
+            "email": "nnascimento@example.net",
+            "password": "(4ICa^2hfw",
+            "administrador": "false",
+            "_id": "30CQP5XH3TVYYqcx"
+        },
+        {
+            "nome": "jose da Silva",
+            "email": "jose@qa.com.br",
+            "password": "teste",
+            "administrador": "false",
+            "_id": "3Y2W990BvRCTSFdF"
+        },
+        {
+            "nome": "Isabela Monteiro",
+            "email": "ada-rocha@example.net",
+            "password": "D6ndZCfL*U",
+            "administrador": "false",
+            "_id": "4Ie5WXKFoK8g4g2W"
+        },
+        {
+            "nome": "Nicole Rodrigues",
+            "email": "mourasarah@example.net",
+            "password": "2SYedn7i(a",
+            "administrador": "false",
+            "_id": "4QQwMo3IRhYvmti5"
+        },
+        {
+            "nome": "Sra. Maria Luiza Novais",
+            "email": "mendoncaesther@example.org",
+            "password": "46bCg5No!a",
+            "administrador": "false",
+            "_id": "5RAqG5G8I39NUYLe"
+        },
+        {
+            "nome": "2 Fulano da Silva",
+            "email": "jgyc@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "7DXjkhLtYKDH4lWl"
+        },
+        {
+            "nome": "Jade Castro",
+            "email": "cardosomarcela@example.org",
+            "password": "!z@M)Nr96J",
+            "administrador": "false",
+            "_id": "7QtwtG3DrB48rpGU"
+        },
+        {
+            "nome": "Blanche Bradtke",
+            "email": "Carmelo59@hotmail.com",
+            "password": "QwbA9HhnMAYHgvp",
+            "administrador": "true",
+            "_id": "9LO8z9QOqH61oG7c"
+        },
+        {
+            "nome": "Ana Júlia Jesus",
+            "email": "macedomariah@example.com",
+            "password": "e&amp;4MgGk@Hm",
+            "administrador": "false",
+            "_id": "AHQc0IVUS4OJPIl2"
+        },
+        {
+            "nome": "Kevin Castro",
+            "email": "iaparecida@example.net",
+            "password": "25LTcTWZ^n",
+            "administrador": "false",
+            "_id": "AefK5kFcnM21lZ1n"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "uklj@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "DLumJi9EdDI46WCR"
+        },
+        {
+            "nome": "Miss Grant Bashirian",
+            "email": "Jennyfer_Herman@yahoo.com",
+            "password": "0YRt9pR0c3wC7nq",
+            "administrador": "true",
+            "_id": "FJ0r1VVAxpmt3Ctw"
+        },
+        {
+            "nome": "Ramiro Brandão",
+            "email": "ramirobrandao@qa.com",
+            "password": "123456",
+            "administrador": "true",
+            "_id": "FYK6cIYCRjoLojpQ"
+        },
+        {
+            "nome": "Berry da Silva",
+            "email": "Avis@qa.com.br",
+            "password": "Teste",
+            "administrador": "true",
+            "_id": "FaJR9fB9bGaIoD0Z"
+        },
+        {
+            "nome": "Maria Helena Sá",
+            "email": "cauadias@example.net",
+            "password": "E)7TMuBcNk",
+            "administrador": "false",
+            "_id": "GigGUoHT2EKJAjNT"
+        },
+        {
+            "nome": "Ana Cecília Pimenta",
+            "email": "maria-fernanda75@example.org",
+            "password": "(PDX1l4c*8",
+            "administrador": "false",
+            "_id": "I8KYRw8Wgfew47w2"
+        },
+        {
+            "nome": "Dana Spencer",
+            "email": "singhwayne@example.com",
+            "password": "Y(b2rY^c+X",
+            "administrador": "true",
+            "_id": "KRfQ0k3xhE7NqlWj"
+        },
+        {
+            "nome": "Thomas Pires",
+            "email": "aurora44@example.com",
+            "password": "*C6LQNe1&amp;Z",
+            "administrador": "false",
+            "_id": "LJuRuX8dAahBQ4Cf"
+        },
+        {
+            "nome": "Eddie Bergnaum",
+            "email": "Amara_Upton74@gmail.com",
+            "password": "nT37ylgQiEnEgX1",
+            "administrador": "false",
+            "_id": "RCfOmMM6sHoLTtXw"
+        },
+        {
+            "nome": "Sadie Hartmann",
+            "email": "Alison_Miller34@yahoo.com",
+            "password": "TF6eRksk6p5jVRD",
+            "administrador": "true",
+            "_id": "SPRrHvPYM47PdN3x"
+        },
+        {
+            "nome": "Manuella Vargas",
+            "email": "da-rosalucca@example.net",
+            "password": "u8ajXU3l$v",
+            "administrador": "false",
+            "_id": "Tb0jJrZlnnEc05Zl"
+        },
+        {
+            "nome": "Antonio Wehner",
+            "email": "Lyla39@yahoo.com",
+            "password": "KTnRYWIrCdLECQo",
+            "administrador": "false",
+            "_id": "TbHej3c0NR0xb8gg"
+        },
+        {
+            "nome": "Lucca Câmara",
+            "email": "claricepacheco@example.net",
+            "password": "^1(w5kVe1&amp;",
+            "administrador": "false",
+            "_id": "UjuCV4fB0VAmzpMH"
+        },
+        {
+            "nome": "Cecília Rocha",
+            "email": "benicio13@example.org",
+            "password": "hsK7kZnw^7",
+            "administrador": "false",
+            "_id": "VvSLAEDCDeY8PA17"
+        },
+        {
+            "nome": "Margarita Johnston",
+            "email": "Margret.Tillman46@gmail.com",
+            "password": "mYdYIGwfUYpQAKq",
+            "administrador": "true",
+            "_id": "XUFTHYmaTViO8emG"
+        },
+        {
+            "nome": "Dra. Agatha Rios",
+            "email": "rioscamila@example.net",
+            "password": "^qvFNkIj5y",
+            "administrador": "false",
+            "_id": "aenEhmPMGhn67KR7"
+        },
+        {
+            "nome": "Verona da Silva",
+            "email": "Jamel@qa.com.br",
+            "password": "Teste",
+            "administrador": "true",
+            "_id": "bLOOtiCmu5k9oOcq"
+        },
+        {
+            "nome": "Kamilly Moreira",
+            "email": "xcassiano@example.com",
+            "password": "^4K5dM&amp;mPV",
+            "administrador": "false",
+            "_id": "bUgsR0uetZhOSWI2"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "okib@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "d54TiQXBHsm0eA6o"
+        },
+        {
+            "nome": "jose da Silva",
+            "email": "joseadm@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "ecAozmArVWnxw5eX"
+        },
+        {
+            "nome": "Fulano Silva de Souza",
+            "email": "beltrano@paneleiro.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "fA719oEu9F6uhFbg"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "cgbh@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "fAqmTGbcZDzlwq5L"
+        },
+        {
+            "nome": "Megan Dunn",
+            "email": "rmoody@example.net",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "g7pbRz6w9v8vtw6Y"
+        },
+        {
+            "nome": "John Turner",
+            "email": "katrinaquinn@example.org",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "hUQaM8sfydUiZ3if"
+        },
+        {
+            "nome": "Carolina Lopes",
+            "email": "eduardacaldeira@example.net",
+            "password": "cf8Zq6ym+Y",
+            "administrador": "false",
+            "_id": "i1E7hntUhii9PB1n"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "beltrano@qa.com.br",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "ib8KUoFEewmPNb2L"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "ntrr@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "ie1Rlk3oiBNbZrQU"
+        },
+        {
+            "nome": "Monica Taylor",
+            "email": "kellygary@example.org",
+            "password": "teste",
+            "administrador": "true",
+            "_id": "jvQ6HYuQrrbTYcti"
+        },
+        {
+            "nome": "Mrs. Rose O'Kon",
+            "email": "Ayden22@yahoo.com",
+            "password": "IeahzSnUTR9BiEz",
+            "administrador": "true",
+            "_id": "lZIlUruabpwwwXxW"
+        },
+        {
+            "nome": "Ian Moura",
+            "email": "wda-costa@example.com",
+            "password": "zP)h0IQj#2",
+            "administrador": "true",
+            "_id": "li6snuETCsxGu1k7"
+        },
+        {
+            "nome": "Christina Weissnat",
+            "email": "Sheridan_Ondricka@hotmail.com",
+            "password": "N3t72sW6v4pGuru",
+            "administrador": "true",
+            "_id": "ltUHbEM4rUNRTTXn"
+        },
+        {
+            "nome": "jose2",
+            "email": "joseteste2@gmail.com",
+            "password": "1234",
+            "administrador": "false",
+            "_id": "m2dKS7NopXm9OgQO"
+        },
+        {
+            "nome": "Ester Rezende",
+            "email": "henrymelo@example.com",
+            "password": "RyTw2One%(",
+            "administrador": "false",
+            "_id": "mXoSuNhdKXJHupwZ"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "rhkp@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "mdgcuzw5wTqnwpj5"
+        },
+        {
+            "nome": "Milena da Conceição",
+            "email": "mirellanovaes@example.com",
+            "password": "d)&amp;4(M0ft@",
+            "administrador": "false",
+            "_id": "nQPlou2ZETR3NyiE"
+        },
+        {
+            "nome": "Laís Gomes",
+            "email": "zda-cruz@example.org",
+            "password": "RN3LE(dpo)",
+            "administrador": "false",
+            "_id": "o5ZPM8YV6dnjEpXi"
+        },
+        {
+            "nome": "Bertha da Silva",
+            "email": "Hattie@qa.com.br",
+            "password": "Teste",
+            "administrador": "true",
+            "_id": "pOTk1jrvf8lVMZWo"
+        },
+        {
+            "nome": "Pedro",
+            "email": "pedro@qa.com.br",
+            "password": "123",
+            "administrador": "true",
+            "_id": "py6vP6HbGgVivxnd"
+        },
+        {
+            "nome": "Sophie Rios",
+            "email": "ada-paz@example.com",
+            "password": "J8GevQXi^!",
+            "administrador": "false",
+            "_id": "r1Ea8eFtcEXSk1KN"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "qehl@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "sCc0T3UkG3ezusf5"
+        },
+        {
+            "nome": "Alicia Botsford",
+            "email": "Emily_Gibson@yahoo.com",
+            "password": "I_BY6UWJbrgYJYK",
+            "administrador": "true",
+            "_id": "tEomaOFerObhtsEc"
+        },
+        {
+            "nome": "Luiz Henrique Albuquerque",
+            "email": "allana73@example.org",
+            "password": "k7L*EXzi)n",
+            "administrador": "false",
+            "_id": "v793VKRzS8xQrdZ4"
+        },
+        {
+            "nome": "Maria Flor Lopes",
+            "email": "fda-mota@example.com",
+            "password": "J&amp;5D)j1Ze@",
+            "administrador": "false",
+            "_id": "vBux0YykGJEv6tw0"
+        },
+        {
+            "nome": "Lane da Silva",
+            "email": "Jeffry@qa.com.br",
+            "password": "Teste",
+            "administrador": "true",
+            "_id": "vsIOGFMAbwDvgtfn"
+        },
+        {
+            "nome": "Anna Liz Nogueira",
+            "email": "vieiraheitor@example.com",
+            "password": "yq^6Af4Ory",
+            "administrador": "false",
+            "_id": "xgvycWdsQAJRNI3J"
+        },
+        {
+            "nome": "Alaina da Silva",
+            "email": "Lurline@qa.com.br",
+            "password": "Teste",
+            "administrador": "true",
+            "_id": "ylxnAV5yLW8RyesA"
+        },
+        {
+            "nome": "eu",
+            "email": "pedro@qaa.com.br",
+            "password": "123",
+            "administrador": "false",
+            "_id": "zTZwB6XjrZ9ZFXme"
+        },
+        {
+            "nome": "Fulano da Silva",
+            "email": "ratr@emailteste.com",
+            "password": "1234",
+            "administrador": "true",
+            "_id": "zTlw3zQOpo42t8Ox"
+        }
+    ]
+} 
+ </msg>
+<msg time="2024-09-18T13:38:06.572946" level="INFO">C:\RFTROMBETA\MyGit\robot-framework\.venv\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-09-18T13:38:06.574336" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg time="2024-09-18T13:38:06.574603" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>usuarios</arg>
+<arg>url=/usuarios</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.071925" elapsed="0.502678"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-09-18T13:38:06.574603" elapsed="0.000000"/>
+</return>
+<msg time="2024-09-18T13:38:06.574603" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg time="2024-09-18T13:38:06.574603" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<doc>Keyword responsável por enviar uma requisição para obter autenticação.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.070573" elapsed="0.504030"/>
+</kw>
+<kw name="Então devo validar o status code de resposta" owner="assertion_common">
+<msg time="2024-09-18T13:38:06.575253" level="TRACE">Arguments: [ ${status_code_esperado}='200' | ${response_da_operacao}=&lt;Response [200]&gt; ]</msg>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:06.575761" level="TRACE">Arguments: [ '200' | &lt;Response [200]&gt; ]</msg>
+<msg time="2024-09-18T13:38:06.575761" level="TRACE">Return: None</msg>
+<arg>${status_code_esperado}</arg>
+<arg>${response_da_operacao}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.575253" elapsed="0.000508"/>
+</kw>
+<msg time="2024-09-18T13:38:06.575993" level="TRACE">Return: None</msg>
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Recebe como argumento dois valores:
+O primeiro é o status code esperado. Ex: 200, 400, 404.
+O segundo argumento é o response contendo o status code de resposta da aplicação.
+A keyword compara os dois valores esperando que sejam iguais.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.575253" elapsed="0.000740"/>
+</kw>
+<doc>Autor: Rodrigo Trombeta
+Data Criação: 18/09/2024
+
+Quando eu consultar os usuários cadastrados
+Então devo validar o status code de resposta 200</doc>
+<tag>001</tag>
+<tag>application-name</tag>
+<tag>regression-test</tag>
+<tag>smoke-test</tag>
+<status status="PASS" start="2024-09-18T13:38:06.069669" elapsed="0.506842"/>
+</test>
+<doc>*SERVEREST.DEV - USUARIOS*
+- serverest.dev/usuarios tem o objetivo consultar os usuários cadastrados.
+- Link para o Swagger - https://serverest.dev/#/Usu%C3%A1rios/get_usuarios</doc>
+<status status="PASS" start="2024-09-18T13:38:04.958249" elapsed="1.619912"/>
+</suite>
+<suite id="s1-s2" name="POST -&gt; /USUARIOS" source="C:\RFTROMBETA\MyGit\robot-framework\api\tests\serverest.dev\usuarios\post_usuarios.robot">
+<test id="s1-s2-t1" name="001 - Cadastrar um novo usuário normal" line="11">
+<kw name="Dado que eu possua dados para cadastrar um novo usuário" owner="gherkin_usuarios">
+<msg time="2024-09-18T13:38:06.596755" level="TRACE">Arguments: [  ]</msg>
+<kw name="Name" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:06.597265" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:06.597265" level="TRACE">Return: 'Sra. Isabella Alves'</msg>
+<msg time="2024-09-18T13:38:06.597473" level="INFO">${nome} = Sra. Isabella Alves</msg>
+<var>${nome}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2024-09-18T13:38:06.596755" elapsed="0.000718"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:06.597473" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:06.597473" level="TRACE">Return: 'cardosoaugusto@example.net'</msg>
+<msg time="2024-09-18T13:38:06.597473" level="INFO">${email} = cardosoaugusto@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-09-18T13:38:06.597473" elapsed="0.000000"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:06.597473" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:06.597991" level="TRACE">Return: '(v0KzwzEoP'</msg>
+<msg time="2024-09-18T13:38:06.597991" level="INFO">${password} = (v0KzwzEoP</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.597473" elapsed="0.000518"/>
+</kw>
+<return>
+<value>${nome}</value>
+<value>${email}</value>
+<value>${password}</value>
+<status status="PASS" start="2024-09-18T13:38:06.597991" elapsed="0.000000"/>
+</return>
+<msg time="2024-09-18T13:38:06.597991" level="TRACE">Return: ['Sra. Isabella Alves', 'cardosoaugusto@example.net', '(v0KzwzEoP']</msg>
+<msg time="2024-09-18T13:38:06.598196" level="INFO">${nome} = Sra. Isabella Alves</msg>
+<msg time="2024-09-18T13:38:06.598196" level="INFO">${email} = cardosoaugusto@example.net</msg>
+<msg time="2024-09-18T13:38:06.598196" level="INFO">${password} = (v0KzwzEoP</msg>
+<var>${nome}</var>
+<var>${email}</var>
+<var>${password}</var>
+<doc>Retorna dados válidos para cadastro de usuário</doc>
+<status status="PASS" start="2024-09-18T13:38:06.596755" elapsed="0.001441"/>
+</kw>
+<kw name="Quando solicitar o cadastro de usuário" owner="gherkin_usuarios">
+<msg time="2024-09-18T13:38:06.598701" level="TRACE">Arguments: [ ${nome}='Sra. Isabella Alves' | ${email}='cardosoaugusto@example.net' | ${password}='(v0KzwzEoP' | ${administrador}='false' ]</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-18T13:38:06.598881" level="TRACE">Arguments: [ 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:06.598881" level="TRACE">Return: 'https://serverest.dev/#'</msg>
+<msg time="2024-09-18T13:38:06.598881" level="INFO">${apiurl} = https://serverest.dev/#</msg>
+<var>${apiurl}</var>
+<arg>https://serverest.dev/#</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.598881" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:06.598881" level="TRACE">Arguments: [ 'cadastroDeUsuarios' | 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:06.598881" level="INFO">Creating Session using : alias=cadastroDeUsuarios, url=https://serverest.dev/#, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-18T13:38:06.598881" level="DEBUG">Creating session: cadastroDeUsuarios</msg>
+<msg time="2024-09-18T13:38:06.599422" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000001A6F0581E50&gt;</msg>
+<arg>cadastroDeUsuarios</arg>
+<arg>${apiurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-18T13:38:06.598881" elapsed="0.000541"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-18T13:38:06.599422" level="TRACE">Arguments: [ 'nome=${nome}' | 'email=${email}' | 'password=${password}' | 'administrador=${administrador}' ]</msg>
+<msg time="2024-09-18T13:38:06.599946" level="TRACE">Return: {'nome': 'Sra. Isabella Alves',
+ 'email': 'cardosoaugusto@example.net',
+ 'password': '(v0KzwzEoP',
+ 'administrador': 'false'}</msg>
+<msg time="2024-09-18T13:38:06.600031" level="INFO">&amp;{body} = { nome=Sra. Isabella Alves | email=cardosoaugusto@example.net | password=(v0KzwzEoP | administrador=false }</msg>
+<var>&amp;{body}</var>
+<arg>nome=${nome}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<arg>administrador=${administrador}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.599422" elapsed="0.000609"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:06.600031" level="TRACE">Arguments: [ 'cadastroDeUsuarios' | url='/usuarios' | json={'nome': 'Sra. Isabella Alves',
+ 'email': 'cardosoaugusto@example.net',
+ 'password': '(v0KzwzEoP',
+ 'administrador': 'false'} ]</msg>
+<msg time="2024-09-18T13:38:06.601526" level="DEBUG">Starting new HTTPS connection (1): serverest.dev:443</msg>
+<msg time="2024-09-18T13:38:07.052279" level="DEBUG">https://serverest.dev:443 "POST /usuarios HTTP/11" 201 82</msg>
+<msg time="2024-09-18T13:38:07.052955" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '122', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "Sra. Isabella Alves", "email": "cardosoaugusto@example.net", "password": "(v0KzwzEoP", "administrador": "false"}' 
+ </msg>
+<msg time="2024-09-18T13:38:07.052955" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+ status=201, reason=Created 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': 'c26d72678972c190c9281351fd012290', 'Date': 'Wed, 18 Sep 2024 16:38:54 GMT', 'Server': 'Google Frontend', 'Content-Length': '82'} 
+ body={
+    "message": "Cadastro realizado com sucesso",
+    "_id": "igT9qKJYc5zx695F"
+} 
+ </msg>
+<msg time="2024-09-18T13:38:07.052955" level="INFO">C:\RFTROMBETA\MyGit\robot-framework\.venv\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-09-18T13:38:07.057917" level="TRACE">Return: &lt;Response [201]&gt;</msg>
+<msg time="2024-09-18T13:38:07.058430" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>cadastroDeUsuarios</arg>
+<arg>url=/usuarios</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-18T13:38:06.600031" elapsed="0.458540"/>
+</kw>
+<return>
+<value>${response}</value>
+<value>${response.json()}</value>
+<status status="PASS" start="2024-09-18T13:38:07.058571" elapsed="0.000000"/>
+</return>
+<msg time="2024-09-18T13:38:07.059083" level="TRACE">Return: [&lt;Response [201]&gt;,
+ {'message': 'Cadastro realizado com sucesso', '_id': 'igT9qKJYc5zx695F'}]</msg>
+<msg time="2024-09-18T13:38:07.059083" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-09-18T13:38:07.059083" level="INFO">${response_content} = {'message': 'Cadastro realizado com sucesso', '_id': 'igT9qKJYc5zx695F'}</msg>
+<var>${response}</var>
+<var>${response_content}</var>
+<arg>${nome}</arg>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<arg>false</arg>
+<doc>Realiza o envio da requisição para cadastro de usuário</doc>
+<status status="PASS" start="2024-09-18T13:38:06.598196" elapsed="0.460887"/>
+</kw>
+<kw name="Então devo validar o status code de resposta" owner="assertion_common">
+<msg time="2024-09-18T13:38:07.060097" level="TRACE">Arguments: [ ${status_code_esperado}='201' | ${response_da_operacao}=&lt;Response [201]&gt; ]</msg>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:07.060614" level="TRACE">Arguments: [ '201' | &lt;Response [201]&gt; ]</msg>
+<msg time="2024-09-18T13:38:07.060614" level="TRACE">Return: None</msg>
+<arg>${status_code_esperado}</arg>
+<arg>${response_da_operacao}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.060097" elapsed="0.000630"/>
+</kw>
+<msg time="2024-09-18T13:38:07.060727" level="TRACE">Return: None</msg>
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Recebe como argumento dois valores:
+O primeiro é o status code esperado. Ex: 200, 400, 404.
+O segundo argumento é o response contendo o status code de resposta da aplicação.
+A keyword compara os dois valores esperando que sejam iguais.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.060097" elapsed="0.000630"/>
+</kw>
+<kw name="E devo validar a mensagem" owner="usuarios">
+<msg time="2024-09-18T13:38:07.061111" level="TRACE">Arguments: [ ${mensagem_esperada}='Cadastro realizado com sucesso' | ${mensagem_response}='Cadastro realizado com sucesso' ]</msg>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.061679" level="TRACE">Arguments: [ 'Cadastro realizado com sucesso' | 'Cadastro realizado com sucesso' ]</msg>
+<msg time="2024-09-18T13:38:07.061679" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-09-18T13:38:07.061679" level="TRACE">Return: None</msg>
+<arg>${mensagem_esperada}</arg>
+<arg>${mensagem_response}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.061679" elapsed="0.000000"/>
+</kw>
+<msg time="2024-09-18T13:38:07.061679" level="TRACE">Return: None</msg>
+<arg>Cadastro realizado com sucesso</arg>
+<arg>${response_content["message"]}</arg>
+<doc>Recebe como argumento dois valores:
+O primeiro é a mensagem esperada.
+O segundo argumento é a mensagem retornada no response de resposta da aplicação.
+A keyword compara os dois valores esperando que sejam iguais.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.061111" elapsed="0.000568"/>
+</kw>
+<kw name="E devo validar se o campo _id não retornou nulo" owner="usuarios">
+<msg time="2024-09-18T13:38:07.062095" level="TRACE">Arguments: [ ${_id}='igT9qKJYc5zx695F' ]</msg>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.062493" level="TRACE">Arguments: [ 'igT9qKJYc5zx695F' ]</msg>
+<msg time="2024-09-18T13:38:07.062493" level="INFO">Length is 16.</msg>
+<msg time="2024-09-18T13:38:07.062493" level="TRACE">Return: None</msg>
+<arg>${_id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.062493" elapsed="0.000000"/>
+</kw>
+<msg time="2024-09-18T13:38:07.062493" level="TRACE">Return: None</msg>
+<arg>${response_content["_id"]}</arg>
+<doc>Recebe como argumento o _id que foi recuperado através do response da requisição.
+A keyword verifica se o campo não está nulo.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.062095" elapsed="0.000398"/>
+</kw>
+<doc>Autor: Rodrigo Trombeta
+Data Criação: 18/09/2024
+
+Dado que eu possua dados para cadastrar um novo usuário
+Quando solicitar o cadastro de usuário
+Então devo validar o status code de resposta
+E devo validar a mensagem</doc>
+<tag>001</tag>
+<tag>regression-test</tag>
+<tag>serverest.dev</tag>
+<tag>smoke-test</tag>
+<status status="PASS" start="2024-09-18T13:38:06.595883" elapsed="0.466610"/>
+</test>
+<test id="s1-s2-t2" name="002 - Cadastrar um novo usuário administrador" line="31">
+<kw name="Dado que eu possua dados para cadastrar um novo usuário" owner="gherkin_usuarios">
+<msg time="2024-09-18T13:38:07.064271" level="TRACE">Arguments: [  ]</msg>
+<kw name="Name" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:07.064271" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:07.064271" level="TRACE">Return: 'Rodrigo Araújo'</msg>
+<msg time="2024-09-18T13:38:07.064271" level="INFO">${nome} = Rodrigo Araújo</msg>
+<var>${nome}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2024-09-18T13:38:07.064271" elapsed="0.000000"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:07.064271" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:07.064831" level="TRACE">Return: 'fpimenta@example.net'</msg>
+<msg time="2024-09-18T13:38:07.064831" level="INFO">${email} = fpimenta@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-09-18T13:38:07.064271" elapsed="0.000560"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-09-18T13:38:07.064986" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-09-18T13:38:07.064986" level="TRACE">Return: '0aw9NEZf*y'</msg>
+<msg time="2024-09-18T13:38:07.064986" level="INFO">${password} = 0aw9NEZf*y</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.064986" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${nome}</value>
+<value>${email}</value>
+<value>${password}</value>
+<status status="PASS" start="2024-09-18T13:38:07.064986" elapsed="0.000000"/>
+</return>
+<msg time="2024-09-18T13:38:07.064986" level="TRACE">Return: ['Rodrigo Araújo', 'fpimenta@example.net', '0aw9NEZf*y']</msg>
+<msg time="2024-09-18T13:38:07.064986" level="INFO">${nome} = Rodrigo Araújo</msg>
+<msg time="2024-09-18T13:38:07.064986" level="INFO">${email} = fpimenta@example.net</msg>
+<msg time="2024-09-18T13:38:07.064986" level="INFO">${password} = 0aw9NEZf*y</msg>
+<var>${nome}</var>
+<var>${email}</var>
+<var>${password}</var>
+<doc>Retorna dados válidos para cadastro de usuário</doc>
+<status status="PASS" start="2024-09-18T13:38:07.064271" elapsed="0.000715"/>
+</kw>
+<kw name="Quando solicitar o cadastro de usuário" owner="gherkin_usuarios">
+<msg time="2024-09-18T13:38:07.065564" level="TRACE">Arguments: [ ${nome}='Rodrigo Araújo' | ${email}='fpimenta@example.net' | ${password}='0aw9NEZf*y' | ${administrador}='true' ]</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.065930" level="TRACE">Arguments: [ 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:07.065930" level="TRACE">Return: 'https://serverest.dev/#'</msg>
+<msg time="2024-09-18T13:38:07.065930" level="INFO">${apiurl} = https://serverest.dev/#</msg>
+<var>${apiurl}</var>
+<arg>https://serverest.dev/#</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.065930" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:07.065930" level="TRACE">Arguments: [ 'cadastroDeUsuarios' | 'https://serverest.dev/#' ]</msg>
+<msg time="2024-09-18T13:38:07.065930" level="INFO">Creating Session using : alias=cadastroDeUsuarios, url=https://serverest.dev/#, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2024-09-18T13:38:07.065930" level="DEBUG">Creating session: cadastroDeUsuarios</msg>
+<msg time="2024-09-18T13:38:07.066495" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000001A6F0580B90&gt;</msg>
+<arg>cadastroDeUsuarios</arg>
+<arg>${apiurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-18T13:38:07.065930" elapsed="0.000565"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.066495" level="TRACE">Arguments: [ 'nome=${nome}' | 'email=${email}' | 'password=${password}' | 'administrador=${administrador}' ]</msg>
+<msg time="2024-09-18T13:38:07.066800" level="TRACE">Return: {'nome': 'Rodrigo Araújo',
+ 'email': 'fpimenta@example.net',
+ 'password': '0aw9NEZf*y',
+ 'administrador': 'true'}</msg>
+<msg time="2024-09-18T13:38:07.066800" level="INFO">&amp;{body} = { nome=Rodrigo Araújo | email=fpimenta@example.net | password=0aw9NEZf*y | administrador=true }</msg>
+<var>&amp;{body}</var>
+<arg>nome=${nome}</arg>
+<arg>email=${email}</arg>
+<arg>password=${password}</arg>
+<arg>administrador=${administrador}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.066495" elapsed="0.000305"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:07.066800" level="TRACE">Arguments: [ 'cadastroDeUsuarios' | url='/usuarios' | json={'nome': 'Rodrigo Araújo',
+ 'email': 'fpimenta@example.net',
+ 'password': '0aw9NEZf*y',
+ 'administrador': 'true'} ]</msg>
+<msg time="2024-09-18T13:38:07.068927" level="DEBUG">Starting new HTTPS connection (1): serverest.dev:443</msg>
+<msg time="2024-09-18T13:38:07.574126" level="DEBUG">https://serverest.dev:443 "POST /usuarios HTTP/11" 201 82</msg>
+<msg time="2024-09-18T13:38:07.574636" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '115', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "Rodrigo Ara\\u00fajo", "email": "fpimenta@example.net", "password": "0aw9NEZf*y", "administrador": "true"}' 
+ </msg>
+<msg time="2024-09-18T13:38:07.574818" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+ status=201, reason=Created 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': '9cce11b0cb45057bbf2b2a897a87ce1e;o=1', 'Date': 'Wed, 18 Sep 2024 16:38:55 GMT', 'Server': 'Google Frontend', 'Content-Length': '82'} 
+ body={
+    "message": "Cadastro realizado com sucesso",
+    "_id": "l4pRckoz5OJHChz5"
+} 
+ </msg>
+<msg time="2024-09-18T13:38:07.574818" level="INFO">C:\RFTROMBETA\MyGit\robot-framework\.venv\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'serverest.dev'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-09-18T13:38:07.576337" level="TRACE">Return: &lt;Response [201]&gt;</msg>
+<msg time="2024-09-18T13:38:07.576337" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>cadastroDeUsuarios</arg>
+<arg>url=/usuarios</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.066800" elapsed="0.509537"/>
+</kw>
+<return>
+<value>${response}</value>
+<value>${response.json()}</value>
+<status status="PASS" start="2024-09-18T13:38:07.576847" elapsed="0.000000"/>
+</return>
+<msg time="2024-09-18T13:38:07.577680" level="TRACE">Return: [&lt;Response [201]&gt;,
+ {'message': 'Cadastro realizado com sucesso', '_id': 'l4pRckoz5OJHChz5'}]</msg>
+<msg time="2024-09-18T13:38:07.577680" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-09-18T13:38:07.577680" level="INFO">${response_content} = {'message': 'Cadastro realizado com sucesso', '_id': 'l4pRckoz5OJHChz5'}</msg>
+<var>${response}</var>
+<var>${response_content}</var>
+<arg>${nome}</arg>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<arg>true</arg>
+<doc>Realiza o envio da requisição para cadastro de usuário</doc>
+<status status="PASS" start="2024-09-18T13:38:07.065564" elapsed="0.512116"/>
+</kw>
+<kw name="Então devo validar o status code de resposta" owner="assertion_common">
+<msg time="2024-09-18T13:38:07.578938" level="TRACE">Arguments: [ ${status_code_esperado}='201' | ${response_da_operacao}=&lt;Response [201]&gt; ]</msg>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2024-09-18T13:38:07.578938" level="TRACE">Arguments: [ '201' | &lt;Response [201]&gt; ]</msg>
+<msg time="2024-09-18T13:38:07.578938" level="TRACE">Return: None</msg>
+<arg>${status_code_esperado}</arg>
+<arg>${response_da_operacao}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.578938" elapsed="0.000000"/>
+</kw>
+<msg time="2024-09-18T13:38:07.578938" level="TRACE">Return: None</msg>
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Recebe como argumento dois valores:
+O primeiro é o status code esperado. Ex: 200, 400, 404.
+O segundo argumento é o response contendo o status code de resposta da aplicação.
+A keyword compara os dois valores esperando que sejam iguais.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.578427" elapsed="0.000511"/>
+</kw>
+<kw name="E devo validar a mensagem" owner="usuarios">
+<msg time="2024-09-18T13:38:07.581274" level="TRACE">Arguments: [ ${mensagem_esperada}='Cadastro realizado com sucesso' | ${mensagem_response}='Cadastro realizado com sucesso' ]</msg>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.581604" level="TRACE">Arguments: [ 'Cadastro realizado com sucesso' | 'Cadastro realizado com sucesso' ]</msg>
+<msg time="2024-09-18T13:38:07.582113" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-09-18T13:38:07.582113" level="TRACE">Return: None</msg>
+<arg>${mensagem_esperada}</arg>
+<arg>${mensagem_response}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.581604" elapsed="0.000509"/>
+</kw>
+<msg time="2024-09-18T13:38:07.582290" level="TRACE">Return: None</msg>
+<arg>Cadastro realizado com sucesso</arg>
+<arg>${response_content["message"]}</arg>
+<doc>Recebe como argumento dois valores:
+O primeiro é a mensagem esperada.
+O segundo argumento é a mensagem retornada no response de resposta da aplicação.
+A keyword compara os dois valores esperando que sejam iguais.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.580459" elapsed="0.001831"/>
+</kw>
+<kw name="E devo validar se o campo _id não retornou nulo" owner="usuarios">
+<msg time="2024-09-18T13:38:07.583517" level="TRACE">Arguments: [ ${_id}='l4pRckoz5OJHChz5' ]</msg>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-09-18T13:38:07.583701" level="TRACE">Arguments: [ 'l4pRckoz5OJHChz5' ]</msg>
+<msg time="2024-09-18T13:38:07.583701" level="INFO">Length is 16.</msg>
+<msg time="2024-09-18T13:38:07.583701" level="TRACE">Return: None</msg>
+<arg>${_id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.583701" elapsed="0.000000"/>
+</kw>
+<msg time="2024-09-18T13:38:07.583701" level="TRACE">Return: None</msg>
+<arg>${response_content["_id"]}</arg>
+<doc>Recebe como argumento o _id que foi recuperado através do response da requisição.
+A keyword verifica se o campo não está nulo.</doc>
+<status status="PASS" start="2024-09-18T13:38:07.582798" elapsed="0.000903"/>
+</kw>
+<doc>Autor: Rodrigo Trombeta
+Data Criação: 18/09/2024
+
+Dado que eu possua dados para cadastrar um novo usuário
+Quando solicitar o cadastro de usuário
+Então devo validar o status code de resposta
+E devo validar a mensagem</doc>
+<tag>002</tag>
+<tag>regression-test</tag>
+<tag>serverest.dev</tag>
+<tag>smoke-test</tag>
+<status status="PASS" start="2024-09-18T13:38:07.063916" elapsed="0.520509"/>
+</test>
+<doc>*SERVEREST.DEV - USUARIOS*
+- serverest.dev/usuarios tem o objetivo cadastrar os usuários no sistema.
+- Link para o Swagger - https://serverest.dev/#/Usu%C3%A1rios/post_usuarios</doc>
+<status status="PASS" start="2024-09-18T13:38:06.580708" elapsed="1.006314"/>
+</suite>
+<status status="PASS" start="2024-09-18T13:38:04.931507" elapsed="2.657395"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">001</stat>
+<stat pass="1" fail="0" skip="0">002</stat>
+<stat pass="1" fail="0" skip="0">application-name</stat>
+<stat pass="3" fail="0" skip="0">regression-test</stat>
+<stat pass="2" fail="0" skip="0">serverest.dev</stat>
+<stat pass="3" fail="0" skip="0">smoke-test</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Usuarios">Usuarios</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="GET -&gt; /USUARIOS">Usuarios.GET -&gt; /USUARIOS</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="POST -&gt; /USUARIOS">Usuarios.POST -&gt; /USUARIOS</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -6,7 +6,7 @@ Documentation
 ...   - application-name tem o objetivo de ...
 ...   - Ambiente: ``${env}``
 ...   - Link para o Swagger da application-name - https://application-name/swagger/index.html
-Resource    ../resources/base.resource
+Resource    ../../../resources/base.resource
 
 *** Test Cases ***
 001 - Consulta todos os dados da application-name
