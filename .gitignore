@@ -10,7 +10,7 @@
 .idea
 
 #Automation project specific files
-api/logs/pabot_results
+api/logs
 .pabotsuitenames
 interactive_console_output.xml
 

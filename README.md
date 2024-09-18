@@ -3,15 +3,6 @@
 ## **Introdução**
 Robot Framework é um framework para automação de testes com uma sintaxe fácil, que faz a utilização de palavras-chaves (keywords) que são legíveis para humanos. As bibliotecas são implementadas utilizando Python.
 
-**Importante**
-Ao trabalhar com Python, é interessante utilizar ambientes virtuais, pois assim, podemos trabalhar com vários projetos sem que as dependências tenham impacto uns nos outros por conta de versões. Dito isso, estando na pasta raiz do projeto, siga os passos abaixo para criar e atiar o ambiente virtual Python:
-1. Para criar o ambiente virtual: ```python -m venv .venv```
-2. Para ativar o ambiente virtual: ```.venv\Scripts\activate```
-    1. Note que o seu terminal ficará com a marcação **(.venv)**, indicando que o ambiente virtual python está ativo.
-3. Acesse a pasta do projeto (ex: cd api) para instalar as dependências através do arquivo **requirements.txt**
-    1. Para instalar as dependências: ```pip install -r requirements.txt```
-4. Para conferir as dependências instaladas no ambiente virtual: ```pip freeze```
-
 ### **Estrutura**
 
 O projeto possui um diretório principal chamado **/api** e dentro desse diretório podemos trabalhar com outros dois diretórios, sendo eles: ```/resources``` e ```/tests```.
@@ -70,15 +61,28 @@ São representados pelos arquivos com extensão **.robot**, devem conter a segui
 ***
 ### **Execução**
 
+**Importante**\
+Ao trabalhar com Python, é interessante utilizar ambientes virtuais, pois assim, podemos trabalhar com vários projetos sem que as dependências tenham impacto uns nos outros por conta de versões. Dito isso, estando na pasta raiz do projeto, siga os passos abaixo para criar e atiar o ambiente virtual Python:
+1. Para criar o ambiente virtual: ```python -m venv .venv```
+2. Para ativar o ambiente virtual: ```.venv\Scripts\activate```
+    1. Note que o seu terminal ficará com a marcação **(.venv)**, indicando que o ambiente virtual python está ativo.
+3. Acesse a pasta do projeto **(cd api)** para instalar as dependências através do arquivo **requirements.txt**
+    1. Para instalar as dependências: ```pip install -r requirements.txt```
+4. Para conferir as dependências instaladas no ambiente virtual: ```pip freeze```
+
 Os testes executados localmente são chamados através de linha de comando digitados no terminal, conforme exemplo:
 
-```robot -d ./logs tests\```
+```robot -d ./logs tests```
 
 O parametro **-d** é responsável por especificar o diretório onde os resultados e relatórios de seu teste serão armazenados, ou seja, a pasta /logs.
 
-**tests** é a pasta onde nossos cenários de testes estão alocados. Executando somente esse comando todos os arquivos de testes inclusos na pasta serão executados. Caso a execução seja necessária em apenas um arquivo, é importante passar o nome do arquivo na linha de comando.
+o parametro **tests** é a pasta principal onde nossos cenários de testes estão alocados. Executando somente esse comando todos os arquivos de testes inclusos na pasta serão executados. Caso a execução seja necessária em apenas um arquivo, é importante passar o nome do arquivo na linha de comando.
 
-```robot -d ./logs tests\test_one_example.robot```
+```robot -d ./logs tests\serverest.dev\```
+
+Também é possível executar vários testes de uma única vez através do pabot, veja abaixo:
+```pabot --testlevelsplit --processes 5 -d .\logs\ tests\serverest.dev```
+
 ***
 ## **Documentação**
 Exemplos de utilização podem ser encontradas no site oficial do [Robot Framework](https://robotframework.org/) 
